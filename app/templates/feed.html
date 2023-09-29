@@ -2,18 +2,12 @@
 
 {% block content %}
     <h2>Feed</h2>
-    <form method="POST" action="/create_post">
-        <input type="text" name="post_content" placeholder="What's on your mind?" required>
-        <button type="submit">Post</button>
-    </form>
+    <!-- Display posts here -->
     
-    <ul>
-        {% for post in posts %}
-            <li>
-                {{ post.content }}
-                <a href="/edit_post/{{ post.id }}">Edit</a>
-                <a href="/delete_post/{{ post.id }}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <h2>Create a Post</h2>
+    <form method="POST" action="/create_post">
+        <textarea name="content" placeholder="Enter your post" rows="4" required></textarea>
+        <input type="text" name="user_id" placeholder="Enter user ID" required>
+        <button type="submit">Create Post</button>
+    </form>
 {% endblock %}

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Social Media Clone</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Social Media Clone</h1>
+      <h1>Social Media Clone</h1>
+      <a href="/add_user">Add User</a>
     </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-</body>
+    <main>{% block content %}{% endblock %}</main>
+  </body>
 </html>
